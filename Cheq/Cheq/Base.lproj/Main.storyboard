@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7GU-3V-llw">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="BGB-qB-CPD">
+            <objects>
+                <viewController id="Llm-BB-oui" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2eo-vw-xzE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="AYC-Xs-T1j"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="profile" selectedImage="profile" id="PMN-ZL-nJS">
+                        <color key="badgeColor" red="0.81176470590000005" green="0.1215686275" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GdM-Uf-HEL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-288" y="664"/>
+        </scene>
+        <!--Wallet View Controller-->
+        <scene sceneID="OgC-kP-tDp">
+            <objects>
+                <viewController id="Ifm-8a-mUR" customClass="WalletViewController" customModule="Cheq" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fm6-63-e9k">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rxy-PG-2sm">
+                                <rect key="frame" x="20" y="94" width="374" height="250"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="IoD-Yg-zEb"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fTL-zH-hLC">
+                                    <size key="itemSize" width="300" height="250"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rxy-PG-2sm" firstAttribute="leading" secondItem="Ua1-CQ-Cp4" secondAttribute="leading" constant="20" id="C33-TN-Q3L"/>
+                            <constraint firstItem="rxy-PG-2sm" firstAttribute="top" secondItem="Ua1-CQ-Cp4" secondAttribute="top" constant="50" id="Ea0-rl-YMU"/>
+                            <constraint firstItem="rxy-PG-2sm" firstAttribute="trailing" secondItem="Ua1-CQ-Cp4" secondAttribute="trailing" constant="-20" id="amb-i8-NXf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ua1-CQ-Cp4"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="wallet" selectedImage="wallet" id="iOm-Ph-Guf">
+                        <color key="badgeColor" red="0.81176470590000005" green="0.1215686275" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="cardCollectionView" destination="rxy-PG-2sm" id="M4c-g7-t9I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5DU-NI-PXe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057.9710144927537" y="-123.21428571428571"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="iOj-zW-Df7">
+            <objects>
+                <viewController id="ERD-Ek-Sl7" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1jf-kN-ETE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="VGb-eC-dAX"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="chart" selectedImage="chart" id="Mib-MS-Ttz">
+                        <color key="badgeColor" red="0.81176470590000005" green="0.1215686275" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jgr-YQ-Nl5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-287" y="-698"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="NBf-yD-9Je">
+            <objects>
+                <tabBarController id="7GU-3V-llw" customClass="TabBarViewController" customModule="Cheq" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tk3-Yy-qFa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ERD-Ek-Sl7" kind="relationship" relationship="viewControllers" id="dk0-9C-hON"/>
+                        <segue destination="Ifm-8a-mUR" kind="relationship" relationship="viewControllers" id="GBl-Pd-Qcc"/>
+                        <segue destination="Llm-BB-oui" kind="relationship" relationship="viewControllers" id="0f5-PI-XuA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xuG-e3-hxH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1206" y="-373"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chart" width="24" height="24"/>
+        <image name="profile" width="24" height="24"/>
+        <image name="wallet" width="24" height="24"/>
+    </resources>
+</document>
