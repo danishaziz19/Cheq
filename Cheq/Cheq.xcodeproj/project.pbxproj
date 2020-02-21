@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,9 @@
 		1C0A71B823FE92C9006DD913 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A71B723FE92C9006DD913 /* WalletViewController.swift */; };
 		1C0A71BE23FE953C006DD913 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A71BC23FE953C006DD913 /* CardCollectionViewCell.swift */; };
 		1C0A71BF23FE953C006DD913 /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C0A71BD23FE953C006DD913 /* CardCollectionViewCell.xib */; };
+		1C0A71C223FF26A4006DD913 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A71C123FF26A4006DD913 /* GradientView.swift */; };
+		1C0A71C523FFACD5006DD913 /* TimeGraphData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A71C423FFACD5006DD913 /* TimeGraphData.swift */; };
+		1C0A71CE24009E9D006DD913 /* GraphRunningTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A71CD24009E9D006DD913 /* GraphRunningTimeView.swift */; };
 		1CCF255B23FE872C005CDF15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCF255A23FE872C005CDF15 /* AppDelegate.swift */; };
 		1CCF255D23FE872C005CDF15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCF255C23FE872C005CDF15 /* SceneDelegate.swift */; };
 		1CCF255F23FE872C005CDF15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCF255E23FE872C005CDF15 /* ViewController.swift */; };
@@ -19,6 +22,7 @@
 		1CCF256723FE8730005CDF15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CCF256523FE8730005CDF15 /* LaunchScreen.storyboard */; };
 		1CCF257223FE8731005CDF15 /* CheqTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCF257123FE8731005CDF15 /* CheqTests.swift */; };
 		1CCF257D23FE8731005CDF15 /* CheqUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCF257C23FE8731005CDF15 /* CheqUITests.swift */; };
+		891E3172F3C8D662A597BCF9 /* Pods_Cheq.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E5067C266E383E6FE729A7D /* Pods_Cheq.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,10 +43,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02A64C185156C5BD79B60787 /* Pods-Cheq.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cheq.release.xcconfig"; path = "Target Support Files/Pods-Cheq/Pods-Cheq.release.xcconfig"; sourceTree = "<group>"; };
 		1C0A71B423FE8C64006DD913 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		1C0A71B723FE92C9006DD913 /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
 		1C0A71BC23FE953C006DD913 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		1C0A71BD23FE953C006DD913 /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
+		1C0A71C123FF26A4006DD913 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		1C0A71C423FFACD5006DD913 /* TimeGraphData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeGraphData.swift; sourceTree = "<group>"; };
+		1C0A71CD24009E9D006DD913 /* GraphRunningTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphRunningTimeView.swift; sourceTree = "<group>"; };
 		1CCF255723FE872C005CDF15 /* Cheq.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cheq.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CCF255A23FE872C005CDF15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CCF255C23FE872C005CDF15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +65,8 @@
 		1CCF257823FE8731005CDF15 /* CheqUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheqUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CCF257C23FE8731005CDF15 /* CheqUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheqUITests.swift; sourceTree = "<group>"; };
 		1CCF257E23FE8731005CDF15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E5067C266E383E6FE729A7D /* Pods_Cheq.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cheq.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		44F06EF5199A124B0C4B7CF6 /* Pods-Cheq.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cheq.debug.xcconfig"; path = "Target Support Files/Pods-Cheq/Pods-Cheq.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				891E3172F3C8D662A597BCF9 /* Pods_Cheq.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +98,7 @@
 		1C0A71B123FE8B81006DD913 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1C0A71C323FFACB5006DD913 /* BarGraph */,
 				1C0A71B623FE92B5006DD913 /* Wallet */,
 				1C0A71B323FE8C4C006DD913 /* Tabbar */,
 			);
@@ -135,6 +147,23 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		1C0A71C023FF2695006DD913 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1C0A71C123FF26A4006DD913 /* GradientView.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		1C0A71C323FFACB5006DD913 /* BarGraph */ = {
+			isa = PBXGroup;
+			children = (
+				1C0A71C423FFACD5006DD913 /* TimeGraphData.swift */,
+				1C0A71CD24009E9D006DD913 /* GraphRunningTimeView.swift */,
+			);
+			path = BarGraph;
+			sourceTree = "<group>";
+		};
 		1CCF254E23FE872C005CDF15 = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +171,8 @@
 				1CCF257023FE8731005CDF15 /* CheqTests */,
 				1CCF257B23FE8731005CDF15 /* CheqUITests */,
 				1CCF255823FE872C005CDF15 /* Products */,
+				4CF595E0A16C7D771D09F6FB /* Pods */,
+				BB2F07E36B0EF835F4DCA396 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,6 +189,7 @@
 		1CCF255923FE872C005CDF15 /* Cheq */ = {
 			isa = PBXGroup;
 			children = (
+				1C0A71C023FF2695006DD913 /* Extension */,
 				1C0A71B123FE8B81006DD913 /* Views */,
 				1CCF255A23FE872C005CDF15 /* AppDelegate.swift */,
 				1CCF255C23FE872C005CDF15 /* SceneDelegate.swift */,
@@ -188,6 +220,23 @@
 			path = CheqUITests;
 			sourceTree = "<group>";
 		};
+		4CF595E0A16C7D771D09F6FB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				44F06EF5199A124B0C4B7CF6 /* Pods-Cheq.debug.xcconfig */,
+				02A64C185156C5BD79B60787 /* Pods-Cheq.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BB2F07E36B0EF835F4DCA396 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E5067C266E383E6FE729A7D /* Pods_Cheq.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -195,9 +244,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1CCF258123FE8731005CDF15 /* Build configuration list for PBXNativeTarget "Cheq" */;
 			buildPhases = (
+				F492061429513E4F125F81D8 /* [CP] Check Pods Manifest.lock */,
 				1CCF255323FE872C005CDF15 /* Sources */,
 				1CCF255423FE872C005CDF15 /* Frameworks */,
 				1CCF255523FE872C005CDF15 /* Resources */,
+				EC39C94CBE21C711D2DC346B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -315,17 +366,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		EC39C94CBE21C711D2DC346B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cheq/Pods-Cheq-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cheq/Pods-Cheq-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cheq/Pods-Cheq-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F492061429513E4F125F81D8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cheq-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1CCF255323FE872C005CDF15 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				1C0A71B523FE8C64006DD913 /* TabBarViewController.swift in Sources */,
+				1C0A71C523FFACD5006DD913 /* TimeGraphData.swift in Sources */,
 				1CCF255F23FE872C005CDF15 /* ViewController.swift in Sources */,
 				1CCF255B23FE872C005CDF15 /* AppDelegate.swift in Sources */,
 				1CCF255D23FE872C005CDF15 /* SceneDelegate.swift in Sources */,
+				1C0A71C223FF26A4006DD913 /* GradientView.swift in Sources */,
 				1C0A71BE23FE953C006DD913 /* CardCollectionViewCell.swift in Sources */,
 				1C0A71B823FE92C9006DD913 /* WalletViewController.swift in Sources */,
+				1C0A71CE24009E9D006DD913 /* GraphRunningTimeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +592,7 @@
 		};
 		1CCF258223FE8731005CDF15 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44F06EF5199A124B0C4B7CF6 /* Pods-Cheq.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -513,6 +610,7 @@
 		};
 		1CCF258323FE8731005CDF15 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02A64C185156C5BD79B60787 /* Pods-Cheq.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

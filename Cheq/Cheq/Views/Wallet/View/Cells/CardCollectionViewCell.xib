@@ -20,11 +20,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="300" height="250"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Common Bank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHy-SN-Ral">
-                                <rect key="frame" x="8" y="15" width="112" height="20"/>
+                                <rect key="frame" x="8" y="15" width="125.5" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="UXW-Z9-9Gj"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -43,17 +43,40 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <stackView clipsSubviews="YES" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kZL-a4-HTw">
+                        <rect key="frame" x="10" y="65" width="280" height="110"/>
+                        <color key="backgroundColor" red="0.01176470588" green="0.68627450980000004" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="280" id="t76-3E-8AI"/>
+                            <constraint firstAttribute="height" constant="110" id="v3d-SP-E4l"/>
+                        </constraints>
+                    </stackView>
+                    <stackView clipsSubviews="YES" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="KEx-N7-t5f">
+                        <rect key="frame" x="10" y="180" width="280" height="15"/>
+                        <color key="backgroundColor" red="0.01176470588" green="0.68627450980000004" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="280" id="fk1-jw-mvI"/>
+                            <constraint firstAttribute="height" constant="15" id="lDn-Dx-JiP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ym4-Yt-KTb"/>
+                    </stackView>
                 </subviews>
             </view>
             <constraints>
+                <constraint firstItem="kZL-a4-HTw" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="4Wj-iE-GEf"/>
                 <constraint firstItem="YjQ-Nl-9B6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Evu-O1-iDh"/>
                 <constraint firstAttribute="bottom" secondItem="YjQ-Nl-9B6" secondAttribute="bottom" id="OHT-iX-xmB"/>
+                <constraint firstItem="KEx-N7-t5f" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Uln-22-NFe"/>
+                <constraint firstItem="kZL-a4-HTw" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="65" id="ft1-lP-ZxC"/>
                 <constraint firstItem="YjQ-Nl-9B6" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="if7-Wd-bjv"/>
+                <constraint firstItem="KEx-N7-t5f" firstAttribute="top" secondItem="kZL-a4-HTw" secondAttribute="bottom" constant="5" id="k6R-EO-onM"/>
                 <constraint firstAttribute="trailing" secondItem="YjQ-Nl-9B6" secondAttribute="trailing" id="xZb-RL-der"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
                 <outlet property="gradientView" destination="YjQ-Nl-9B6" id="r4k-vo-koD"/>
+                <outlet property="graphStackView" destination="kZL-a4-HTw" id="6a5-io-WFK"/>
+                <outlet property="indexStackView" destination="KEx-N7-t5f" id="LcD-np-dRY"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
         </collectionViewCell>

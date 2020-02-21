@@ -62,25 +62,4 @@ extension WalletViewController: UICollectionViewDelegate, UICollectionViewDataSo
         return CGSize(width: collectionViewSize, height: 200)
         
     }
-
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-//        if from == "Magazine-Home" {
-//            return 10
-//        }
-//        return 0
-//    }
-
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        if from == "Magazine-Home" {
-//            return 10
-//        }
-//        return 0
-//    }
-
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//        if from == "Magazine-Home" {
-//            return UIEdgeInsets(top: 0, left: 10, bottom: 10, right: 10)
-//        }
-//        return UIEdgeInsets(top: 0, left: 10, bottom: 10, right: 10)
-//    }
 }
