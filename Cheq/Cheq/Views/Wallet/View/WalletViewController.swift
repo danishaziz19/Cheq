@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import iOSDropDown
 
 enum CardCellType: String{
     case cardCell = "cardCell"
@@ -15,19 +16,35 @@ enum CardCellType: String{
 class WalletViewController: UIViewController {
     
     @IBOutlet weak var cardCollectionView: UICollectionView!
+    @IBOutlet weak var dropDown : DropDown!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        loadCollectionView()
+        setupCollectionView()
+        setupDropDown()
     }
     
-    func loadCollectionView() {
+    func setupCollectionView() {
         cardCollectionView.dataSource = self
         cardCollectionView.delegate = self
         self.registerCells()
         cardCollectionView.reloadData()
+    }
+    
+    func setupDropDown() {
+        // The list of array to display. Can be changed dynamically
+        dropDown.listHeight = 350
+        dropDown.optionArray = ["January", "Febuary", "March", "Apirl", "May", "June", "July", "August", "September", "Octobar", "November", "December"]
+        dropDown.listWillAppear {
+            self.dropDown.resignFirstResponder()
+        }
+        
+        // The the Closure returns Selected Index and String
+        dropDown.didSelect{(selectedText , index ,id) in
+        print("Selected String: \(selectedText) \n index: \(index)")
+        }
     }
     
     func registerCells(){

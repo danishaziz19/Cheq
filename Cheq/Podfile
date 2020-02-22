@@ -4,4 +4,5 @@ use_frameworks!
 
 target "Cheq" do
     pod 'Charts'
+    pod 'iOSDropDown'
 end

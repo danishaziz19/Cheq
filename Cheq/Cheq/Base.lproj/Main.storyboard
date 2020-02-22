@@ -33,8 +33,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Select Months" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kec-r6-sFN" customClass="DropDown" customModule="iOSDropDown">
+                                <rect key="frame" x="254" y="64" width="140" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="sOt-7a-NfF"/>
+                                    <constraint firstAttribute="height" constant="34" id="ylr-U5-Qie"/>
+                                </constraints>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rxy-PG-2sm">
-                                <rect key="frame" x="20" y="94" width="374" height="250"/>
+                                <rect key="frame" x="20" y="114" width="374" height="250"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="IoD-Yg-zEb"/>
@@ -47,12 +56,27 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expenses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ey0-Qz-7pl">
+                                <rect key="frame" x="20" y="66" width="109" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="hDi-i5-kwC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.98135166952054798" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="rxy-PG-2sm" firstAttribute="leading" secondItem="Ua1-CQ-Cp4" secondAttribute="leading" constant="20" id="C33-TN-Q3L"/>
-                            <constraint firstItem="rxy-PG-2sm" firstAttribute="top" secondItem="Ua1-CQ-Cp4" secondAttribute="top" constant="50" id="Ea0-rl-YMU"/>
+                            <constraint firstItem="kec-r6-sFN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ua1-CQ-Cp4" secondAttribute="leading" symbolic="YES" id="EAR-kh-yrm"/>
+                            <constraint firstItem="rxy-PG-2sm" firstAttribute="top" secondItem="Ua1-CQ-Cp4" secondAttribute="top" constant="70" id="Ea0-rl-YMU"/>
                             <constraint firstItem="rxy-PG-2sm" firstAttribute="trailing" secondItem="Ua1-CQ-Cp4" secondAttribute="trailing" constant="-20" id="amb-i8-NXf"/>
+                            <constraint firstItem="Ua1-CQ-Cp4" firstAttribute="trailing" secondItem="kec-r6-sFN" secondAttribute="trailing" constant="20" id="bTk-Fz-y6S"/>
+                            <constraint firstItem="Ey0-Qz-7pl" firstAttribute="leading" secondItem="Ua1-CQ-Cp4" secondAttribute="leading" constant="20" id="fuA-Ds-3ke"/>
+                            <constraint firstItem="kec-r6-sFN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ey0-Qz-7pl" secondAttribute="trailing" constant="8" symbolic="YES" id="k0o-Mv-D5e"/>
+                            <constraint firstItem="Ey0-Qz-7pl" firstAttribute="top" secondItem="Ua1-CQ-Cp4" secondAttribute="top" constant="22" id="ojD-1j-oIa"/>
+                            <constraint firstItem="kec-r6-sFN" firstAttribute="top" secondItem="Ua1-CQ-Cp4" secondAttribute="top" constant="20" id="xoL-Th-AcB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ua1-CQ-Cp4"/>
                     </view>
@@ -61,6 +85,7 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="cardCollectionView" destination="rxy-PG-2sm" id="M4c-g7-t9I"/>
+                        <outlet property="dropDown" destination="kec-r6-sFN" id="FNh-kc-tJS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5DU-NI-PXe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
