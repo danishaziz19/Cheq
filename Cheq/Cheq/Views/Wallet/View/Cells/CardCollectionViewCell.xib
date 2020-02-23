@@ -77,6 +77,7 @@
                 <outlet property="gradientView" destination="YjQ-Nl-9B6" id="r4k-vo-koD"/>
                 <outlet property="graphStackView" destination="kZL-a4-HTw" id="6a5-io-WFK"/>
                 <outlet property="indexStackView" destination="KEx-N7-t5f" id="LcD-np-dRY"/>
+                <outlet property="lblTitle" destination="XHy-SN-Ral" id="kaT-dL-Qw9"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
         </collectionViewCell>

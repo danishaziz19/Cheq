@@ -43,10 +43,10 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rxy-PG-2sm">
-                                <rect key="frame" x="20" y="114" width="374" height="250"/>
+                                <rect key="frame" x="20" y="114" width="374" height="200"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="IoD-Yg-zEb"/>
+                                    <constraint firstAttribute="height" constant="200" id="IoD-Yg-zEb"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fTL-zH-hLC">
                                     <size key="itemSize" width="300" height="250"/>
@@ -65,14 +65,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0t9-EV-7i5">
+                                <rect key="frame" x="20" y="344" width="374" height="459"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="5" id="ulM-gy-7Ia">
+                                    <size key="itemSize" width="180" height="180"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="0.98135166952054798" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Ua1-CQ-Cp4" firstAttribute="trailing" secondItem="rxy-PG-2sm" secondAttribute="trailing" constant="20" id="9ec-sk-MbG"/>
+                            <constraint firstItem="0t9-EV-7i5" firstAttribute="leading" secondItem="Ua1-CQ-Cp4" secondAttribute="leading" constant="20" id="AV1-bD-FWu"/>
                             <constraint firstItem="rxy-PG-2sm" firstAttribute="leading" secondItem="Ua1-CQ-Cp4" secondAttribute="leading" constant="20" id="C33-TN-Q3L"/>
                             <constraint firstItem="kec-r6-sFN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ua1-CQ-Cp4" secondAttribute="leading" symbolic="YES" id="EAR-kh-yrm"/>
+                            <constraint firstItem="0t9-EV-7i5" firstAttribute="top" secondItem="rxy-PG-2sm" secondAttribute="bottom" constant="30" id="EKs-ZH-Mbh"/>
                             <constraint firstItem="rxy-PG-2sm" firstAttribute="top" secondItem="Ua1-CQ-Cp4" secondAttribute="top" constant="70" id="Ea0-rl-YMU"/>
-                            <constraint firstItem="rxy-PG-2sm" firstAttribute="trailing" secondItem="Ua1-CQ-Cp4" secondAttribute="trailing" constant="-20" id="amb-i8-NXf"/>
+                            <constraint firstItem="Ua1-CQ-Cp4" firstAttribute="bottom" secondItem="0t9-EV-7i5" secondAttribute="bottom" constant="10" id="X77-dK-jCB"/>
                             <constraint firstItem="Ua1-CQ-Cp4" firstAttribute="trailing" secondItem="kec-r6-sFN" secondAttribute="trailing" constant="20" id="bTk-Fz-y6S"/>
+                            <constraint firstItem="Ua1-CQ-Cp4" firstAttribute="trailing" secondItem="0t9-EV-7i5" secondAttribute="trailing" constant="20" id="fJN-4T-q8X"/>
                             <constraint firstItem="Ey0-Qz-7pl" firstAttribute="leading" secondItem="Ua1-CQ-Cp4" secondAttribute="leading" constant="20" id="fuA-Ds-3ke"/>
                             <constraint firstItem="kec-r6-sFN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ey0-Qz-7pl" secondAttribute="trailing" constant="8" symbolic="YES" id="k0o-Mv-D5e"/>
                             <constraint firstItem="Ey0-Qz-7pl" firstAttribute="top" secondItem="Ua1-CQ-Cp4" secondAttribute="top" constant="22" id="ojD-1j-oIa"/>
@@ -86,6 +101,7 @@
                     <connections>
                         <outlet property="cardCollectionView" destination="rxy-PG-2sm" id="M4c-g7-t9I"/>
                         <outlet property="dropDown" destination="kec-r6-sFN" id="FNh-kc-tJS"/>
+                        <outlet property="livingExpCollectionView" destination="0t9-EV-7i5" id="dZA-2u-OnM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5DU-NI-PXe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

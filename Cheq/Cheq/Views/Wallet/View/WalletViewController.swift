@@ -11,12 +11,16 @@ import iOSDropDown
 
 enum CardCellType: String{
     case cardCell = "cardCell"
+    case expenseCell = "expenseCell"
 }
 
 class WalletViewController: UIViewController {
     
     @IBOutlet weak var cardCollectionView: UICollectionView!
+    @IBOutlet weak var livingExpCollectionView: UICollectionView!
     @IBOutlet weak var dropDown : DropDown!
+    
+    let presenter: WalletPresenter = WalletPresenter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,49 +28,73 @@ class WalletViewController: UIViewController {
         // Do any additional setup after loading the view.
         setupCollectionView()
         setupDropDown()
+        loadData()
+    }
+    
+    func loadData() {
+        presenter.loadCards()
     }
     
     func setupCollectionView() {
         cardCollectionView.dataSource = self
         cardCollectionView.delegate = self
-        self.registerCells()
-        cardCollectionView.reloadData()
+        
+        livingExpCollectionView.dataSource = self
+        livingExpCollectionView.delegate = self
+        
+        presenter.delegate = self
+        
+        registerCells()
     }
     
     func setupDropDown() {
-        // The list of array to display. Can be changed dynamically
+        
         dropDown.listHeight = 350
-        dropDown.optionArray = ["January", "Febuary", "March", "Apirl", "May", "June", "July", "August", "September", "Octobar", "November", "December"]
+        dropDown.optionArray = presenter.getMonths()
+        
         dropDown.listWillAppear {
             self.dropDown.resignFirstResponder()
         }
+        dropDown.selectedRowColor = UIColor.lightGray
         
         // The the Closure returns Selected Index and String
         dropDown.didSelect{(selectedText , index ,id) in
-        print("Selected String: \(selectedText) \n index: \(index)")
+            print("Selected String: \(selectedText) \n index: \(index)")
         }
     }
     
-    func registerCells(){
+    func registerCells() {
         cardCollectionView.register(UINib(nibName: "CardCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: CardCellType.cardCell.rawValue)
+        livingExpCollectionView.register(UINib(nibName: "LivingExpCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: CardCellType.expenseCell.rawValue)
     }
-    
 }
 
 extension WalletViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        if collectionView == self.cardCollectionView {
+            return self.presenter.getCardCount()
+        } else {
+            return self.presenter.getLivingExpenseCount()
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-      
-        guard let cell: CardCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCellType.cardCell.rawValue, for: indexPath) as? CardCollectionViewCell  else {
-                    return UICollectionViewCell()
+        if collectionView == self.cardCollectionView {
+            guard let cell: CardCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCellType.cardCell.rawValue, for: indexPath) as? CardCollectionViewCell  else {
+                return UICollectionViewCell()
+            }
+            let source = self.presenter.getCard(row: indexPath.item)
+            cell.setCell(card: source)
+            return cell
+        } else {
+            guard let cell: LivingExpCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCellType.expenseCell.rawValue, for: indexPath) as? LivingExpCollectionViewCell  else {
+                return UICollectionViewCell()
+            }
+            let source = self.presenter.getLivingExpense(row: indexPath.item)
+            cell.setCell(livingExpense: source)
+            return cell
         }
-       // let source = self.magazines[indexPath.item]
-       // cell.setCell(source: source)
-        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -74,9 +102,24 @@ extension WalletViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView,layout collectionViewLayout: UICollectionViewLayout,sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let padding: CGFloat =  20
-        let collectionViewSize = collectionView.frame.size.width - padding
-        return CGSize(width: collectionViewSize, height: 200)
         
+        if collectionView == self.cardCollectionView {
+            let padding: CGFloat =  20
+            let collectionViewSize = collectionView.frame.size.width - padding
+            return CGSize(width: collectionViewSize, height: 200)
+        } else {
+            let padding: CGFloat =  10
+            let collectionViewSize = (collectionView.frame.size.width / 2.0) - padding
+            return CGSize(width: collectionViewSize, height: 180)
+        }
     }
 }
+
+extension WalletViewController: WalletPresenterDelegate {
+    
+    func reload() {
+        cardCollectionView.reloadData()
+        livingExpCollectionView.reloadData()
+    }
+}
+

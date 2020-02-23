@@ -14,6 +14,13 @@
 		1C0A71C223FF26A4006DD913 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A71C123FF26A4006DD913 /* GradientView.swift */; };
 		1C0A71C523FFACD5006DD913 /* TimeGraphData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A71C423FFACD5006DD913 /* TimeGraphData.swift */; };
 		1C0A71CE24009E9D006DD913 /* GraphRunningTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A71CD24009E9D006DD913 /* GraphRunningTimeView.swift */; };
+		1C0A71D2240246A4006DD913 /* Piechart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A71D1240246A4006DD913 /* Piechart.swift */; };
+		1C0A71D5240265C6006DD913 /* LivingExpCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A71D3240265C6006DD913 /* LivingExpCollectionViewCell.swift */; };
+		1C0A71D6240265C6006DD913 /* LivingExpCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C0A71D4240265C6006DD913 /* LivingExpCollectionViewCell.xib */; };
+		1C0A71D92402859B006DD913 /* LivingExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A71D82402859B006DD913 /* LivingExpense.swift */; };
+		1C0A71DB24028696006DD913 /* WalletDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A71DA24028696006DD913 /* WalletDataModel.swift */; };
+		1C0A71DE24028756006DD913 /* WalletPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A71DD24028756006DD913 /* WalletPresenter.swift */; };
+		1C0A71E024028883006DD913 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A71DF24028883006DD913 /* Card.swift */; };
 		1CCF255B23FE872C005CDF15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCF255A23FE872C005CDF15 /* AppDelegate.swift */; };
 		1CCF255D23FE872C005CDF15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCF255C23FE872C005CDF15 /* SceneDelegate.swift */; };
 		1CCF255F23FE872C005CDF15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCF255E23FE872C005CDF15 /* ViewController.swift */; };
@@ -51,6 +58,13 @@
 		1C0A71C123FF26A4006DD913 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		1C0A71C423FFACD5006DD913 /* TimeGraphData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeGraphData.swift; sourceTree = "<group>"; };
 		1C0A71CD24009E9D006DD913 /* GraphRunningTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphRunningTimeView.swift; sourceTree = "<group>"; };
+		1C0A71D1240246A4006DD913 /* Piechart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Piechart.swift; sourceTree = "<group>"; };
+		1C0A71D3240265C6006DD913 /* LivingExpCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivingExpCollectionViewCell.swift; sourceTree = "<group>"; };
+		1C0A71D4240265C6006DD913 /* LivingExpCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LivingExpCollectionViewCell.xib; sourceTree = "<group>"; };
+		1C0A71D82402859B006DD913 /* LivingExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivingExpense.swift; sourceTree = "<group>"; };
+		1C0A71DA24028696006DD913 /* WalletDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletDataModel.swift; sourceTree = "<group>"; };
+		1C0A71DD24028756006DD913 /* WalletPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletPresenter.swift; sourceTree = "<group>"; };
+		1C0A71DF24028883006DD913 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		1CCF255723FE872C005CDF15 /* Cheq.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cheq.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CCF255A23FE872C005CDF15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CCF255C23FE872C005CDF15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,7 +112,6 @@
 		1C0A71B123FE8B81006DD913 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1C0A71C323FFACB5006DD913 /* BarGraph */,
 				1C0A71B623FE92B5006DD913 /* Wallet */,
 				1C0A71B323FE8C4C006DD913 /* Tabbar */,
 			);
@@ -116,6 +129,8 @@
 		1C0A71B623FE92B5006DD913 /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
+				1C0A71DC2402872E006DD913 /* Presenter */,
+				1C0A71D724028587006DD913 /* Entities */,
 				1C0A71BA23FE92E1006DD913 /* Model */,
 				1C0A71B923FE92D2006DD913 /* View */,
 			);
@@ -134,6 +149,7 @@
 		1C0A71BA23FE92E1006DD913 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1C0A71DA24028696006DD913 /* WalletDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -143,6 +159,8 @@
 			children = (
 				1C0A71BC23FE953C006DD913 /* CardCollectionViewCell.swift */,
 				1C0A71BD23FE953C006DD913 /* CardCollectionViewCell.xib */,
+				1C0A71D3240265C6006DD913 /* LivingExpCollectionViewCell.swift */,
+				1C0A71D4240265C6006DD913 /* LivingExpCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -162,6 +180,40 @@
 				1C0A71CD24009E9D006DD913 /* GraphRunningTimeView.swift */,
 			);
 			path = BarGraph;
+			sourceTree = "<group>";
+		};
+		1C0A71CF24024686006DD913 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				1C0A71D024024699006DD913 /* PieChart */,
+				1C0A71C323FFACB5006DD913 /* BarGraph */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		1C0A71D024024699006DD913 /* PieChart */ = {
+			isa = PBXGroup;
+			children = (
+				1C0A71D1240246A4006DD913 /* Piechart.swift */,
+			);
+			path = PieChart;
+			sourceTree = "<group>";
+		};
+		1C0A71D724028587006DD913 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				1C0A71D82402859B006DD913 /* LivingExpense.swift */,
+				1C0A71DF24028883006DD913 /* Card.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		1C0A71DC2402872E006DD913 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1C0A71DD24028756006DD913 /* WalletPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		1CCF254E23FE872C005CDF15 = {
@@ -189,6 +241,7 @@
 		1CCF255923FE872C005CDF15 /* Cheq */ = {
 			isa = PBXGroup;
 			children = (
+				1C0A71CF24024686006DD913 /* Library */,
 				1C0A71C023FF2695006DD913 /* Extension */,
 				1C0A71B123FE8B81006DD913 /* Views */,
 				1CCF255A23FE872C005CDF15 /* AppDelegate.swift */,
@@ -346,6 +399,7 @@
 				1C0A71BF23FE953C006DD913 /* CardCollectionViewCell.xib in Resources */,
 				1CCF256723FE8730005CDF15 /* LaunchScreen.storyboard in Resources */,
 				1CCF256423FE8730005CDF15 /* Assets.xcassets in Resources */,
+				1C0A71D6240265C6006DD913 /* LivingExpCollectionViewCell.xib in Resources */,
 				1CCF256223FE872C005CDF15 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,13 +467,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C0A71E024028883006DD913 /* Card.swift in Sources */,
+				1C0A71D5240265C6006DD913 /* LivingExpCollectionViewCell.swift in Sources */,
 				1C0A71B523FE8C64006DD913 /* TabBarViewController.swift in Sources */,
+				1C0A71D2240246A4006DD913 /* Piechart.swift in Sources */,
+				1C0A71DB24028696006DD913 /* WalletDataModel.swift in Sources */,
+				1C0A71D92402859B006DD913 /* LivingExpense.swift in Sources */,
 				1C0A71C523FFACD5006DD913 /* TimeGraphData.swift in Sources */,
 				1CCF255F23FE872C005CDF15 /* ViewController.swift in Sources */,
 				1CCF255B23FE872C005CDF15 /* AppDelegate.swift in Sources */,
 				1CCF255D23FE872C005CDF15 /* SceneDelegate.swift in Sources */,
 				1C0A71C223FF26A4006DD913 /* GradientView.swift in Sources */,
 				1C0A71BE23FE953C006DD913 /* CardCollectionViewCell.swift in Sources */,
+				1C0A71DE24028756006DD913 /* WalletPresenter.swift in Sources */,
 				1C0A71B823FE92C9006DD913 /* WalletViewController.swift in Sources */,
 				1C0A71CE24009E9D006DD913 /* GraphRunningTimeView.swift in Sources */,
 			);

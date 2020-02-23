@@ -11,6 +11,7 @@ import UIKit
 class CardCollectionViewCell: UICollectionViewCell, GraphRunningTimeView {
     
     @IBOutlet weak var gradientView: GradientView!
+    @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var graphStackView: UIStackView!
     @IBOutlet weak var indexStackView: UIStackView!
     
@@ -28,19 +29,13 @@ class CardCollectionViewCell: UICollectionViewCell, GraphRunningTimeView {
     
     func setup() {
         gradientView.layer.cornerRadius = 10
-        self.updateInfo(runningTimeCollection: createTimeCollection())
     }
     
-    private func createTimeCollection() -> [TimeGraphData] {
-        
-        let january = TimeGraphData(id: 1, amount: "100$", month: "JAN", percentage: 10.0)
-        let febraury = TimeGraphData(id: 2, amount: "200$", month: "FEB", percentage: 20.0)
-        let march = TimeGraphData(id: 3, amount: "300$", month: "MAR", percentage: 30.0)
-        let april = TimeGraphData(id: 4, amount: "400$", month: "APR", percentage: 40.0)
-        let may = TimeGraphData(id: 5, amount: "500$", month: "MAY", percentage: 50.0)
-        let june = TimeGraphData(id: 6, amount: "600$", month: "JUN", percentage: 60.0)
-        
-        return [january,febraury,march,april,may,june]
+    func setCell(card: Card) {
+        self.lblTitle.text = card.cardName
+        self.gradientView.startColor = card.gradientColor1
+        self.gradientView.endColor = card.gradientColor2
+        self.updateInfo(runningTimeCollection: card.monthsData)
     }
     
     //MARK: Graph Support
