@@ -33,6 +33,7 @@ class WalletViewController: UIViewController {
     
     func loadData() {
         presenter.loadCards()
+        presenter.loadLivingExpenses()
     }
     
     func setupCollectionView() {

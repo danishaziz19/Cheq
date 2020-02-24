@@ -10,8 +10,12 @@ import UIKit
 
 class WalletDataModel: NSObject {
     
-    func getLivingExpenses() -> LivingExpenses {
-        return []
+    let api: FirebaseAPI = FirebaseAPI()
+    
+    func getLivingExpense(response: @escaping (_ livingExpenses: LivingExpenses?) -> Void) {
+        api.getLivingExpense { (living) in
+            response(living)
+        }
     }
     
     func getCards() -> Cards {
@@ -28,13 +32,24 @@ class WalletDataModel: NSObject {
     
     private func getTimeGraphData() -> [TimeGraphData] {
         
-        let january = TimeGraphData(id: 1, amount: "100$", month: "JAN", percentage: 10.0)
-        let febraury = TimeGraphData(id: 2, amount: "200$", month: "FEB", percentage: 20.0)
-        let march = TimeGraphData(id: 3, amount: "300$", month: "MAR", percentage: 30.0)
-        let april = TimeGraphData(id: 4, amount: "400$", month: "APR", percentage: 40.0)
-        let may = TimeGraphData(id: 5, amount: "500$", month: "MAY", percentage: 50.0)
-        let june = TimeGraphData(id: 6, amount: "600$", month: "JUN", percentage: 60.0)
+        var randomAmount = random()
+        let january = TimeGraphData(id: 1, amount: "\(Int(randomAmount * 10))$", month: "JAN", percentage: randomAmount)
+        randomAmount = random()
+        let febraury = TimeGraphData(id: 2, amount: "\(Int(randomAmount * 10))$", month: "FEB", percentage: randomAmount)
+        randomAmount = random()
+        let march = TimeGraphData(id: 3, amount: "\(Int(randomAmount * 10))$", month: "MAR", percentage: randomAmount)
+        randomAmount = random()
+        let april = TimeGraphData(id: 4, amount: "\(Int(randomAmount * 10))$", month: "APR", percentage: randomAmount)
+        randomAmount = random()
+        let may = TimeGraphData(id: 5, amount: "\(Int(randomAmount * 10))$", month: "MAY", percentage: randomAmount)
+        randomAmount = random()
+        let june = TimeGraphData(id: 6, amount: "\(Int(randomAmount * 10))$", month: "JUN", percentage: randomAmount)
         
         return [january,febraury,march,april,may,june]
+    }
+    
+    /// Returns a random floating point number between 0.0 and 1.0, inclusive.
+    func random() -> Double {
+        return (Double(arc4random()) / 0xFFFFFFFF) * 100.0
     }
 }

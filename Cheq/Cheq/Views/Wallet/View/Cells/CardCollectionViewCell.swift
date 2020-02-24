@@ -14,7 +14,7 @@ class CardCollectionViewCell: UICollectionViewCell, GraphRunningTimeView {
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var graphStackView: UIStackView!
     @IBOutlet weak var indexStackView: UIStackView!
-    
+    var card: Card?
     let graphColor: UIColor = UIColor.white.withAlphaComponent(0.5)
     
     override func awakeFromNib() {
@@ -24,7 +24,7 @@ class CardCollectionViewCell: UICollectionViewCell, GraphRunningTimeView {
     }
     
     override func prepareForReuse() {
-        
+        removeGraphElements ()
     }
     
     func setup() {
@@ -32,6 +32,7 @@ class CardCollectionViewCell: UICollectionViewCell, GraphRunningTimeView {
     }
     
     func setCell(card: Card) {
+        self.card = card
         self.lblTitle.text = card.cardName
         self.gradientView.startColor = card.gradientColor1
         self.gradientView.endColor = card.gradientColor2
@@ -54,10 +55,18 @@ class CardCollectionViewCell: UICollectionViewCell, GraphRunningTimeView {
         for view in indexStackView.arrangedSubviews {
             view.removeFromSuperview()
         }
+        
+        for view in indexStackView.subviews {
+            view.removeFromSuperview()
+        }
     }
     
     private func removeAllGraphElements () {
         for view in graphStackView.arrangedSubviews {
+            view.removeFromSuperview()
+        }
+        
+        for view in graphStackView.subviews {
             view.removeFromSuperview()
         }
     }
@@ -71,10 +80,10 @@ class CardCollectionViewCell: UICollectionViewCell, GraphRunningTimeView {
         monthLabel.textAlignment = .center
         monthLabel.textColor = UIColor.white
         
-        monthLabel.heightAnchor.constraint(equalToConstant: monthLabelHeight).isActive = true
+       // monthLabel.heightAnchor.constraint(equalToConstant: monthLabelHeight).isActive = true
         
         indexStackView.addArrangedSubview(monthLabel)
-        indexStackView.translatesAutoresizingMaskIntoConstraints = false;
+        //indexStackView.translatesAutoresizingMaskIntoConstraints = false
     }
     
     private func addGraphElement (timeGraphData: TimeGraphData) {
@@ -108,10 +117,10 @@ class CardCollectionViewCell: UICollectionViewCell, GraphRunningTimeView {
         verticalStackView.addArrangedSubview(view)
         
         verticalStackView.heightAnchor.constraint(equalToConstant: totalHeight).isActive = true
-        verticalStackView.translatesAutoresizingMaskIntoConstraints = false;
+        verticalStackView.translatesAutoresizingMaskIntoConstraints = false
         
         graphStackView.addArrangedSubview(verticalStackView)
-        graphStackView.translatesAutoresizingMaskIntoConstraints = false;
+        graphStackView.translatesAutoresizingMaskIntoConstraints = false
     }
     
     private func heightPixelsDependOfPercentage (percentage: Double) -> CGFloat {
@@ -119,7 +128,7 @@ class CardCollectionViewCell: UICollectionViewCell, GraphRunningTimeView {
         return (CGFloat(percentage) * maxHeigh) / 100
     }
     
-    func updateInfo (runningTimeCollection: [TimeGraphData]){
+    func updateInfo (runningTimeCollection: [TimeGraphData]) {
         removeAllGraphElements()
         for timeGraphData in runningTimeCollection {
             newGraphElement(timeGraphData: timeGraphData)

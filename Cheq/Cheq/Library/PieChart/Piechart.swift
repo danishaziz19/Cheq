@@ -31,7 +31,7 @@ open class Piechart: UIControl {
      * Radius
      */
     public struct Radius {
-        public var inner: CGFloat = 40
+        public var inner: CGFloat = 50
         public var outer: CGFloat = 60
     }
     

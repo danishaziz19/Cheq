@@ -11,6 +11,8 @@ import UIKit
 class LivingExpCollectionViewCell: UICollectionViewCell, PiechartDelegate {
 
     @IBOutlet weak var view: UIView!
+    @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var piechart: Piechart!
     
     override func awakeFromNib() {
@@ -20,9 +22,11 @@ class LivingExpCollectionViewCell: UICollectionViewCell, PiechartDelegate {
     
     func setCell(livingExpense: LivingExpense) {
        
+        icon.image = UIImage(named: livingExpense.icon)
+        
         var pieChartSlise = Piechart.Slice()
         pieChartSlise.value = livingExpense.value
-        pieChartSlise.color = UIColor.orange
+        pieChartSlise.color = livingExpense.color
         pieChartSlise.text = livingExpense.title
         
         piechart.delegate = self
@@ -36,6 +40,8 @@ class LivingExpCollectionViewCell: UICollectionViewCell, PiechartDelegate {
         view.layer.cornerRadius = 8
         view.layer.shadowColor = UIColor.lightGray.cgColor
         view.layer.shadowRadius = 4
+        
+        lblTitle.text = livingExpense.expenseType
     }
     
     func setSubtitle(_ total: CGFloat, slice: Piechart.Slice) -> String {

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>696214830672-9kotj8ncbffqpf41rc32960ubv9udqds.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.696214830672-9kotj8ncbffqpf41rc32960ubv9udqds</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBbOH4A6PdZfaVN79wP8i-RQCd2aHT2JFk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>696214830672</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>danish.Cheq</string>
+	<key>PROJECT_ID</key>
+	<string>cheq-7fc37</string>
+	<key>STORAGE_BUCKET</key>
+	<string>cheq-7fc37.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:696214830672:ios:3d1d0b39c2419d01c11b55</string>
+	<key>DATABASE_URL</key>
+	<string>https://cheq-7fc37.firebaseio.com</string>
+</dict>
+</plist>

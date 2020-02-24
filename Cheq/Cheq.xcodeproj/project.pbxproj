@@ -21,6 +21,9 @@
 		1C0A71DB24028696006DD913 /* WalletDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A71DA24028696006DD913 /* WalletDataModel.swift */; };
 		1C0A71DE24028756006DD913 /* WalletPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A71DD24028756006DD913 /* WalletPresenter.swift */; };
 		1C0A71E024028883006DD913 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A71DF24028883006DD913 /* Card.swift */; };
+		1C0A71E32403BA88006DD913 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C0A71E22403BA88006DD913 /* GoogleService-Info.plist */; };
+		1C0A71E72403BF2F006DD913 /* DBTables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A71E62403BF2F006DD913 /* DBTables.swift */; };
+		1C0A71EA2403C07E006DD913 /* FirebaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A71E92403C07E006DD913 /* FirebaseAPI.swift */; };
 		1CCF255B23FE872C005CDF15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCF255A23FE872C005CDF15 /* AppDelegate.swift */; };
 		1CCF255D23FE872C005CDF15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCF255C23FE872C005CDF15 /* SceneDelegate.swift */; };
 		1CCF255F23FE872C005CDF15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCF255E23FE872C005CDF15 /* ViewController.swift */; };
@@ -65,6 +68,9 @@
 		1C0A71DA24028696006DD913 /* WalletDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletDataModel.swift; sourceTree = "<group>"; };
 		1C0A71DD24028756006DD913 /* WalletPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletPresenter.swift; sourceTree = "<group>"; };
 		1C0A71DF24028883006DD913 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		1C0A71E22403BA88006DD913 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1C0A71E62403BF2F006DD913 /* DBTables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBTables.swift; sourceTree = "<group>"; };
+		1C0A71E92403C07E006DD913 /* FirebaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAPI.swift; sourceTree = "<group>"; };
 		1CCF255723FE872C005CDF15 /* Cheq.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cheq.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CCF255A23FE872C005CDF15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CCF255C23FE872C005CDF15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -216,6 +222,22 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		1C0A71E52403BF15006DD913 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				1C0A71E92403C07E006DD913 /* FirebaseAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		1C0A71E82403BF6D006DD913 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				1C0A71E62403BF2F006DD913 /* DBTables.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		1CCF254E23FE872C005CDF15 = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +263,8 @@
 		1CCF255923FE872C005CDF15 /* Cheq */ = {
 			isa = PBXGroup;
 			children = (
+				1C0A71E82403BF6D006DD913 /* Config */,
+				1C0A71E52403BF15006DD913 /* API */,
 				1C0A71CF24024686006DD913 /* Library */,
 				1C0A71C023FF2695006DD913 /* Extension */,
 				1C0A71B123FE8B81006DD913 /* Views */,
@@ -249,8 +273,9 @@
 				1CCF255E23FE872C005CDF15 /* ViewController.swift */,
 				1CCF256023FE872C005CDF15 /* Main.storyboard */,
 				1CCF256323FE8730005CDF15 /* Assets.xcassets */,
-				1CCF256523FE8730005CDF15 /* LaunchScreen.storyboard */,
 				1CCF256823FE8730005CDF15 /* Info.plist */,
+				1C0A71E22403BA88006DD913 /* GoogleService-Info.plist */,
+				1CCF256523FE8730005CDF15 /* LaunchScreen.storyboard */,
 			);
 			path = Cheq;
 			sourceTree = "<group>";
@@ -401,6 +426,7 @@
 				1CCF256423FE8730005CDF15 /* Assets.xcassets in Resources */,
 				1C0A71D6240265C6006DD913 /* LivingExpCollectionViewCell.xib in Resources */,
 				1CCF256223FE872C005CDF15 /* Main.storyboard in Resources */,
+				1C0A71E32403BA88006DD913 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +503,8 @@
 				1CCF255F23FE872C005CDF15 /* ViewController.swift in Sources */,
 				1CCF255B23FE872C005CDF15 /* AppDelegate.swift in Sources */,
 				1CCF255D23FE872C005CDF15 /* SceneDelegate.swift in Sources */,
+				1C0A71E72403BF2F006DD913 /* DBTables.swift in Sources */,
+				1C0A71EA2403C07E006DD913 /* FirebaseAPI.swift in Sources */,
 				1C0A71C223FF26A4006DD913 /* GradientView.swift in Sources */,
 				1C0A71BE23FE953C006DD913 /* CardCollectionViewCell.swift in Sources */,
 				1C0A71DE24028756006DD913 /* WalletPresenter.swift in Sources */,

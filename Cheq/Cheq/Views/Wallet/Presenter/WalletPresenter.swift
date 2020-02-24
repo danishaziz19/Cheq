@@ -25,8 +25,10 @@ class WalletPresenter: NSObject {
     }
     
     func loadLivingExpenses() {
-        self.livingExpenses = dataModel.getLivingExpenses()
-        self.delegate?.reload()
+        dataModel.getLivingExpense { (living) in
+            self.livingExpenses = living ?? []
+            self.delegate?.reload()
+        }
     }
     
     func loadCards() {

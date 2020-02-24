@@ -66,6 +66,8 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="130" height="130"/>
             <connections>
+                <outlet property="icon" destination="Y8c-yo-xj1" id="wYO-Pu-wMG"/>
+                <outlet property="lblTitle" destination="ZuE-ps-len" id="2gG-9p-yRD"/>
                 <outlet property="piechart" destination="E0s-Dk-AlC" id="R09-ev-rwC"/>
                 <outlet property="view" destination="oQr-Ll-ZQq" id="Ahc-kT-odm"/>
             </connections>
